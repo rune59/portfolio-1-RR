@@ -1,0 +1,154 @@
+/*--------------------------------------------------------------
+Content of this file: 
+  Styling both the logo and the menu on the same top line
+  Adapting the logo image
+  Styling the logo box
+  Styling the topmenu as well as the hamburger menu
+  Styling the hamburger menu
+    - Making the hamburger menu invisible on laptops
+    - Making the hamburger icon display the menu
+    - Making the hamburger menu visible against the background color
+    - Decide at which screen width the hamburger menu shall become visible,
+      and how it is to be styled
+    - Adapting the font size of the hamburger menu to various screen width
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+Styling both the logo and the menu on the same top line
+--------------------------------------------------------------*/
+.logo-and-hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1600px;
+  padding: 0 50px;
+}
+
+/*--------------------------------------------------------------
+Adapting the logo image
+--------------------------------------------------------------*/.portfolio-logo img {
+  width: 90px;
+}
+
+/*--------------------------------------------------------------
+Styling the logo box
+--------------------------------------------------------------*/
+.portfolio-logo {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    gap: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    /* The font-size of 40px is making great problems for the navbar */
+    /* font-size: 40px; */
+    justify-content: center;
+}
+
+
+
+/*--------------------------------------------------------------
+Styling the topmenu as well as the hamburger menu
+--------------------------------------------------------------*/
+nav {
+  display: none;
+  position: fixed;
+  top: 91px;
+  background-color: var(--color-background-nav-hamburger);
+  z-index: 1000;
+  right: 0px;
+  text-align: left;
+}
+
+nav a{
+    /* color: #f2f2f2; */
+    text-align: center;
+    padding:15px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav li {
+  padding: 10px 30px 10px 30px;
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+nav li:hover{
+  text-decoration: underline;
+  text-decoration-color: var(--color-text-underline-nav);
+}
+
+/* Text color for the nav menu */
+nav li a {
+  color: var(--color-text-nav);
+}
+
+nav a:hover {
+    background-color: var(--color-background-nav-topmenu-hover);
+    color: var(--color-text-nav-hover);
+}
+
+
+
+
+/*--------------------------------------------------------------
+Styling the hamburger menu
+--------------------------------------------------------------*/
+
+/* Making the hamburger menu invisible on laptops*/
+#hamburger-menu {
+  display: none;
+}
+
+/* Making the hamburger icon display the menu */
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+/* Making the hamburger menu visible against the background color */
+header i {
+  color: var(--color-icon-hamburger);
+  font-size: 1.5em;
+}
+
+
+
+/* This is where the hamburger menu becomes visible */
+@media (min-width: 1000px) {
+    nav {
+        display: block;
+        position: static;
+        font-size: 1.2em;
+        background: none;
+    }
+
+    nav li {
+        display: inline-block;
+        padding: 0 50px 0 50px;
+      }
+
+    header label {
+        display: none;
+    }
+}
+
+
+
+/* Adapting the font size of the hamburger menu */
+@media (max-width: 800px) {
+    nav li,
+    nav a{
+        font-size: 15px;
+    }
+}
+@media (max-width: 500px) {
+    nav li,
+    nav a{
+        font-size: 10px;
+    }
+}
+
+
+

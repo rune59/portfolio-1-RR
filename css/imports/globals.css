@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------
+Global variables for text colors, background colors 
+hamburger icon and family font
+--------------------------------------------------------------*/
+
+:root {
+    --color-text-nav-hover: black;
+    --color-text-nav: #FFF;
+    --color-text-underline-nav: black;
+    --color-text-nav-hover: black;
+    --color-text-body:#0f272f;
+    --color-text-heading-title: green;
+    --color-text-project-name: red;
+    --color-text-about: black;
+    --color-text-footer: white;
+    --color-text-footer-hover: black;
+    --color-text-underline-footer-hover: black;
+
+    --color-icon-hamburger: #FFF;
+
+    --color-underscore-text-hover-footer:black;
+
+    --color-background-header:black;
+    --color-background-nav-topmenu-hover: #f2f2f2;
+    --color-background-nav-hamburger: black;
+    --color-background-nav-hamburger-hover: #f2f2f2;
+    --color-background-projects:#3E454C; 
+    --color-background-project: white;
+    --color-bakcground-heading-portfolio-projects: whitesmoke;
+    --color-background-project-card: white;
+    --color-background-project-heading: white;
+    --color-background-about: #FFF6E5;
+    --color-background-contact: bisque;
+    --color-background-footer: black;
+    --color-background-footer-hover: #ddd;
+
+    --font-family-1:Verdana, Geneva, Tahoma, sans-serif;
+}

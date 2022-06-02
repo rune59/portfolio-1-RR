@@ -1,0 +1,366 @@
+/*--------------------------------------------------------------
+Content in this file: 
+	- Import of other css-files
+	- General styling
+	- Typography
+	- Media screen, both for the font-size and margin-top of the main area
+	- Links
+	- Styling images and icons
+	- Styling the heading of the project
+	- Styling the Introduction section
+	- Styling the Projects section
+	- Styling the projects for justifications of the screen width
+		- 1. Use flex to create a three-project layout
+		- 2. CSS Grid layout for wider screens, when browser supports grid
+	- Styling the About section
+	- Styling the Personalia section
+--------------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------------------------------------
+Import of other css-files
+--------------------------------------------------------------*/
+@import "imports/globals.css";
+@import "imports/navigation.css";
+@import "imports/footer.css";
+
+
+
+
+
+/*--------------------------------------------------------------
+General styling
+--------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;    margin: 0;
+}
+
+body {
+	font-family: var(--font-family-1);
+	font-size: 20px;
+    font-weight: 400;
+	line-height: 1.5;
+	color: var(--color-text-body);
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+	
+}
+
+header {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-background-header);
+    padding: 0px 0px;
+    z-index: 100;
+}
+
+/* Positioning the top content of the main area not to be covered by the navbar */
+.main-area{
+	margin-top: 148px;
+}
+
+
+
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+/* The default font-size, if no @media query is in action */
+
+h1 {
+	font-size: 40px;
+}
+h2 {
+	font-size: 30px; 
+}
+h3 {
+	font-size: 20px;
+}
+
+
+/* Text-align, margin and padding */
+h1,
+h2,
+h3,
+.twin p {
+	text-align: center;
+	margin: 0;
+	padding: 1em 0;
+}
+
+p {
+	margin: 0;
+	/* padding: 1em 0; */
+	padding: 0;
+}
+
+.text-indent{
+	text-indent: 50px;
+}
+.color-project-name{
+	color: var(--color-text-project-name);
+}
+
+
+
+/*--------------------------------------------------------------
+Media screen, both for the font-size and margin-top of the main area
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 900px) {
+	body {	
+		font-size: 16px;
+	}
+	.main-area {
+		margin-top: 130px;
+	}
+	h1 {
+		font-size: 30px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	body {
+		font-size: 12px;
+	}
+	.main-area {
+		margin-top: 130px;
+	}
+	
+	h1 {
+		font-size: 20px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 15px;
+	}
+}
+
+
+
+/*--------------------------------------------------------------
+Links
+--------------------------------------------------------------*/
+a {
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+Styling images and icons
+--------------------------------------------------------------*/
+
+img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+.img-rune{
+	width:40%;
+	/* height: 50%; */
+	margin-left: auto;
+	margin-right: auto;}
+
+.link-icon{
+	width: 40px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+
+
+
+/*--------------------------------------------------------------
+Styling the heading of the project
+--------------------------------------------------------------*/
+.heading-projects{
+	background-color: var(--color-background-project-heading);
+	background-color: var();
+	padding-bottom: 40px;
+}
+.heading-projects{
+	padding: 0;
+}
+
+.heading-title{
+	color: var(--color-text-heading-title);
+}
+/*--------------------------------------------------------------
+Styling the Introduction section
+--------------------------------------------------------------*/
+
+.intro,
+.about {
+	background-color: var(--color-background-about);
+	padding-bottom: 2em;
+}
+
+
+.intro-content {
+    padding: 2em;
+}
+
+.heading-content {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+}
+
+.heading-portfolio-projects{
+	background-color: var(--color-bakcground-heading-portfolio-projects);
+}
+
+@media screen and (min-width: 600px) {
+	.intro-text {
+		columns: 2;
+		column-gap: 4em;
+	}
+
+	.intro-text p {
+		padding-top: 0;
+	}
+}
+
+/*--------------------------------------------------------------
+Styling the Projects section
+--------------------------------------------------------------*/
+.projects {
+	padding: 2em 1em 1em;
+	background-color: var(--color-background-projects);
+}
+
+.projects ul {
+	margin: 0;
+	padding: 0;
+}
+
+.projects li {
+	margin-bottom: 1em;
+	background-color: var(--color-background-project);
+	list-style-type: none;
+}
+
+.project {
+	padding: 1.5em;
+}
+
+.card-label{
+	/* text-decoration: underline; */
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 0;
+	margin-bottom: 3px;
+}
+
+
+/*--------------------------------------------------------------
+Styling the About section
+--------------------------------------------------------------*/
+.about {
+	padding: 2em;
+}
+
+
+/*--------------------------------------------------------------
+Styling the Personalia section
+--------------------------------------------------------------*/
+.heading-content {
+	background-color: var(--color-background-contact);
+	padding-bottom: 2em;
+}
+
+.twin {
+	padding: 2em;
+	background-color: var(--color-background-contact);
+	color: var(--color-text-about);
+}
+
+.twin:last-of-type {
+	background-color: var(--color-background-contact);
+}
+
+
+
+/*--------------------------------------------------------------
+Styling the projects for justifications of the screen width
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1. Use flex to create a three-project layout
+--------------------------------------------------------------*/
+
+@media screen and (min-width:1100px) {
+	@supports (display: flex) {
+
+		.projects ul {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.projects li {
+			width: 31%;
+		}
+
+	}
+}
+
+
+/*--------------------------------------------------------------
+2. CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 600px) {
+	/* Layout with CSS Grid */
+	@supports (grid-area: auto) {
+
+		/* Four-column layout. Two center columns have a total max width of 50em: */
+		.grid {
+            max-width: none;
+			margin: 0;
+			display: grid;
+			grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+		}
+
+		/* Let the items use the whole width of the screen er items by placing them 
+			from and including column 1 up to and including column 6: */
+		.intro-content,
+		.heading-content,
+		.heading-portfolio-projects,
+		.projects ul {
+			grid-column: 1/6;
+		}
+		/* Center items by placing them in the tree center columns, 
+		from and including column 2 up to and including column 4.: */
+		.about-content{
+			grid-column: 2/4;
+		}
+		/* Styling the Personalia section */
+		.twin{
+			grid-column: span 2;
+		}
+
+	}
+}

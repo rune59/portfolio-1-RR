@@ -1,0 +1,85 @@
+.footer{
+    height: 200px;
+    bottom: 0;
+    font-size: 20px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    background-color: var(--color-background-footer);
+    color: var(--color-text-footer);
+}
+
+.footer div {
+    display: flex;
+    justify-content: center;
+}
+.footer p {
+    align-self: center;
+    color:var(--color-text-footer);
+}
+
+.footer li {
+    list-style: none;
+}
+.writer{
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+.footer a {
+    color: var(--color-text-footer-hover);
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer ul {
+    padding: 10px 30px 10px 30px;
+    display: block;
+}
+
+
+.footer li:hover {
+    background-color: var(--color-background-footer-hover);
+    color: var(--color-text-underline-footer-hover);
+}
+
+
+.footer-content-left a:hover,
+.footer-content-right a:hover {
+    text-decoration: underline;
+    color: var(--color-text-underline-footer-hover);
+}
+.footer-content-left a,
+.footer-content-right a {
+    color: var(--color-text-footer);
+}
+.writer p{
+    color: var(--color-text-footer);
+}
+
+
+
+@media (max-width: 800px) {
+    .writer{
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .writer{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .footer li,
+    .writer p{
+        font-size: 10px;
+    }
+}
