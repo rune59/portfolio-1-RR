@@ -207,6 +207,7 @@ Styling the heading of the project
 
 .heading-title{
 	color: var(--color-text-heading-title);
+	padding-top: 50px;
 }
 /*--------------------------------------------------------------
 Styling the Introduction section
